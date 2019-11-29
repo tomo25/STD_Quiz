@@ -16,10 +16,12 @@ contract STD_Zombiee {
         uint256 height;
         uint256 weight;
         uint256 BMI;
+        uint256 bloodPressure;
+        uint256 footSize;
     }
 
     Zombiee[] public zombiees;
-
+ 
     function zombieeFactory( //引数は17個
         string memory _firstName,
         string memory _middleName,
@@ -31,7 +33,9 @@ contract STD_Zombiee {
         uint256 _age,
         uint256 _height,
         uint256 _weight,
-        uint256 _BMI
+        uint256 _BMI,
+        uint256 _bloodPressure,
+        uint256 _footSize
         ) public {
         Zombiee memory zombiee = Zombiee({
             id: 0,
@@ -45,7 +49,9 @@ contract STD_Zombiee {
             age: _age,
             height: _height,
             weight: _weight,
-            BMI: _BMI
+            BMI: _BMI,
+            bloodPressure: _bloodPressure,
+            footSize: _footSize
         });
         zombiees.push(zombiee);
         emit ZombieeCreated(zombiee);
