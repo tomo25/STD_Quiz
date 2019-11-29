@@ -69,9 +69,5 @@ contract STD_Zombiee {
         emit ZombieeCreated(zombiee);
     }
 
-    function getZombiee(uint _id) public view returns(Zombiee memory){
-        return zombiees[_id - 1];
-    }
-
     event ZombieeCreated(Zombiee zombiee);
 }
